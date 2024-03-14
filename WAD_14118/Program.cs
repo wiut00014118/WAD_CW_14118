@@ -1,4 +1,9 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using WAD_14118.Data;
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<WAD_14118Context>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("WAD_14118Context") ?? throw new InvalidOperationException("Connection string 'WAD_14118Context' not found.")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
