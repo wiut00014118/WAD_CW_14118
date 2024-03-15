@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WAD_14118.Data;
 
@@ -10,9 +11,11 @@ using WAD_14118.Data;
 namespace WAD_14118.Migrations
 {
     [DbContext(typeof(WAD_14118Context))]
-    partial class WAD_14118ContextModelSnapshot : ModelSnapshot
+    [Migration("20240315045802_ImageUrl")]
+    partial class ImageUrl
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
