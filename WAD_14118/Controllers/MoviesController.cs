@@ -54,7 +54,7 @@ namespace WAD_14118.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Title,Genre,Rating,ImdbUrl")] Movies movies)
+        public async Task<IActionResult> Create([Bind("Id,Title,Genre,Rating,ImdbUrl,ImageUrl")] Movies movies)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace WAD_14118.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,Genre,Rating,ImdbUrl")] Movies movies)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,Genre,Rating,ImdbUrl,ImageUrl")] Movies movies)
         {
             if (id != movies.Id)
             {
